@@ -24,6 +24,17 @@ pipeline:
                     command: echo hello world
                   timeout: ""
                   type: Run
+              - step:
+                  type: BuildAndPushECR
+                  name: BuildAndPushECR_1
+                  identifier: BuildAndPushECR_1
+                  spec:
+                    connectorRef: testconnector
+                    region: ap-south-1
+                    account: "981813099174"
+                    imageName: testimage
+                    tags:
+                      - dev
           platform:
             arch: Amd64
             os: Linux
