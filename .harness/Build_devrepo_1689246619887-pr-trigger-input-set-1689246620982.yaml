@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_devrepo_1689246619887-pr-trigger-input-set
+  identifier: Build_devrepo_1689246619887prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_devrepo_1689246619887
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
